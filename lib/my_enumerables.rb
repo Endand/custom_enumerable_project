@@ -66,8 +66,15 @@ module Enumerable
     arr
   end
 
-  def my_inject
-    # Complete code
+  def my_inject(initial = nil)
+    accumulator = initial.nil? ? self[0] : initial
+    
+    start_index = initial.nil? ? 1 : 0
+    for i in start_index...self.length
+      accumulator = yield(accumulator, self[i])
+    end
+    
+    accumulator
   end
 
 end
