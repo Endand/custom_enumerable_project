@@ -1,5 +1,36 @@
 module Enumerable
-  # Your code goes here
+
+  def my_each_with_index
+    for i in (0...self.length)
+      yield(self[i],i)
+    end
+    self
+  end
+
+  def my_select
+    
+  end
+  
+  def my_all?
+    # Complete code
+  end
+
+  def my_none?
+    # Complete code
+  end
+
+  def my_count
+    # Complete code
+  end
+  
+  def my_map
+    # Complete code
+  end
+
+  def my_inject
+    # Complete code
+  end
+
 end
 
 # You will first have to define my_each
