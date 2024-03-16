@@ -40,7 +40,7 @@ module Enumerable
   def my_none?
     none=true
     for i in (0...self.length)
-      if !yield(self[i]) 
+      if yield(self[i]) 
         none=false
       end
     end
