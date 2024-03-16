@@ -8,7 +8,13 @@ module Enumerable
   end
 
   def my_select
-    
+    result=[]
+    for i in (0...self.length)
+      if yield(self[i]) 
+        result<<self[i]
+      end
+    end
+    result
   end
   
   def my_all?
