@@ -48,7 +48,14 @@ module Enumerable
   end
 
   def my_count
-    # Complete code
+    if block_given?
+      count=0
+      for i in (0...self.length)
+        count+=1 if yield(self[i])
+      end
+      return count
+    end
+    self.length
   end
   
   def my_map
