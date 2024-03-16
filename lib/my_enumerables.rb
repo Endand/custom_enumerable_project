@@ -59,7 +59,11 @@ module Enumerable
   end
   
   def my_map
-    # Complete code
+    arr=[]
+    for i in (0...self.length)
+        arr[i]=yield(self[i])
+    end
+    arr
   end
 
   def my_inject
