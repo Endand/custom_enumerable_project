@@ -18,7 +18,13 @@ module Enumerable
   end
   
   def my_all?
-    # Complete code
+    all=true
+    for i in (0...self.length)
+      if !yield(self[i]) 
+        all=false
+      end
+    end
+    all
   end
 
   def my_none?
